@@ -1,0 +1,257 @@
+
+/* GLOBAL */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #191919;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+
+/* HEADER  */
+
+header {
+  background-color: #8C1D40;
+  color: white;
+  padding: 60px 24px;
+  border-bottom: 8px solid #FFC627;
+}
+
+header h1 {
+  margin: 0;
+  max-width: 800px;
+}
+
+header p {
+  margin-top: 16px;
+  font-size: 1.25rem;
+}
+
+
+/* NAVIGATION FLEXBOX  */
+
+nav {
+  background-color: #191919;
+  padding: 16px 24px;
+}
+
+.nav-link {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-link a:hover {
+  color: #FFC627;
+}
+
+
+/* MAIN LAYOUT */
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+main > section {
+  margin-bottom: 64px;
+}
+
+section > p {
+  max-width: 800px;
+}
+
+
+/* ABOUT FLEXBOX */
+
+#about {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.about-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 0;
+}
+
+.about-image img {
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+  display: block;
+}
+
+figcaption {
+  font-size: 0.75rem;
+  margin-top: 8px;
+  color: #484848;
+}
+
+.about-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.about-content h2 {
+  margin-top: 0;
+}
+
+
+/* STUDY CARDS CSS GRI */
+
+.study-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  padding: 0;
+  margin-top: 32px;
+  list-style: none;
+}
+
+.study-grid li {
+  background-color: #FAFAFA;
+  border-top: 5px solid #FFC627;
+  padding: 24px;
+}
+
+.study-grid h3 {
+  margin-top: 0;
+  color: #8C1D40;
+}
+
+.study-grid p {
+  margin-bottom: 0;
+}
+
+
+/* APPLICATIONS */
+
+#applications {
+  border-top: 2px solid #E8E8E8;
+  padding-top: 40px;
+}
+
+
+/* EXPLORE */
+
+#explore {
+  background-color: #8C1D40;
+  color: white;
+  padding: 32px 24px;
+}
+
+#explore h2 {
+  margin-top: 0;
+}
+
+.button {
+  display: inline-block;
+  background-color: #FFC627;
+  color: #191919;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 16px;
+}
+
+.button:hover {
+  background-color: white;
+}
+
+
+/* FOOTER */
+
+footer {
+  background-color: #191919;
+  color: white;
+  text-align: center;
+  padding: 24px;
+}
+
+
+/* 600px+ */
+
+@media (min-width: 600px) {
+
+  main {
+    padding: 40px;
+  }
+
+  .study-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nav-link {
+    gap: 32px;
+  }
+
+}
+
+
+/* 900px+ */
+
+@media (min-width: 900px) {
+
+  header {
+    padding: 80px 40px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  #about {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .about-image {
+    flex: 0 0 300px;
+  }
+
+  .study-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  #explore {
+    padding: 48px;
+  }
+
+}
